@@ -153,7 +153,17 @@ footer a:hover{
         border-bottom: none;
     }
 }
-
+@media(max-width: 410px){
+    .carousel.mt-5{
+        margin-top: 5rem!important;
+    }
+}
+@media (min-width: 410px){
+    .carousel-caption.d-md-block {
+        display: block!important;
+    }
+}
+    
 /* Modal & Tabs*/
 .signIn_modal .nav-tabs .nav-link{
     background-color: #e5e5e5;
@@ -268,5 +278,4 @@ footer a:hover{
 .product .mt-5{
     margin-top: 10rem!important;
 }
-
 /* Product */
