@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniks</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <!-- nanti coba gambar di atas text furniks -->
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
+                <img class="" src = "img/site icon.png" alt = "site icon">
+                <span class = "text-uppercase fw-lighter ms-2">Furniks</span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative" data-bs-toggle="modal" data-bs-target="#searchBar">
+                    <i class = "fa fa-search"></i>
+                </button>
+                <button type = "button" class = "btn position-relative" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fa fa-user"></i>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-shopping-cart"></i>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-success">5</span>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "index.html">home</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "shop.html">shop</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "about.html">about us</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2 ">
+                        <a class = "nav-link text-uppercase text-dark" href = "contact.html">contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- search bar -->
+    <div class="modal fade " id="searchBar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="searchBar">
+                    <form action="">
+                        <div class="input-group rounded-pill p-1">
+                            <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon3" class="form-control bg-none border-0">
+                            <div class="input-group-append border-0">
+                                <button id="button-addon3" type="button" class="btn btn-link text-success"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End search bar -->
+
+
+
+    <!-- Login -->
+    <!-- Modal & Tab -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="signIn_modal">
+                    <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="signIn-tab" data-bs-toggle="tab" data-bs-target="#signIn" type="button" role="tab" aria-controls="signIn" aria-selected="true">Sign In</button>
+                        </li>
+                        <li class="nav-item nav-fill" role="presentation">
+                            <button class="nav-link" id="signUp-tab" data-bs-toggle="tab" data-bs-target="#signUp" type="button" role="tab" aria-controls="signUp" aria-selected="false">Sign Up</button>
+                        </li>
+                    </ul>
+                    <div class="social_login">
+                        <div class="text-center text-muted delimiter">With your social network</div>
+                        <div class="d-flex justify-content-center ">
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-rounded" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </button>
+                        </div>
+                        <div class="text-center text-muted delimiter">Or</div>
+                    </div>
+                    <div class="tab-content signIn_tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="signIn" role="tabpanel" aria-labelledby="signIn-tab">
+                            <form>
+                                <div class="mb-3">
+                                  <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp" placeholder="Username">
+                                </div>
+                                <div class="mb-3">
+                                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                </div>
+                                <p class="forgot_link"><a href="#">Forgot your password?</a></p>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                </div>
+                                <p class="signUp_link">New to Furniks? <a href="#">Sign Up</a></p>
+                                //cobaa dijadiin button.masalah disini saat mau pindah gak bisa gblk
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="signUp" role="tabpanel" aria-labelledby="signUp-tab">
+                            <form>
+                                <div class="mb-3">
+                                  <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp" placeholder="Username">
+                                </div>
+                                <div class="mb-3">
+                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                </div>
+                                <div class="mb-3 form-check">
+                                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary">Create An Account</button>
+                                </div>
+                                <p class="signUp_link " >Already have an account? <a href="#" >Sign In</a></p>
+                                //masalah disini cobba dijadiin button
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Login -->
+    
+
+    <!-- Header -->
+    <header>
+        <div id="carouselExampleCaptions" class="carousel slide carousel-dark mt-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner ">
+              <div class="carousel-item active">
+                <img src="img/carousel1.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-start text-dark">
+                  <h5>DECOR COLLECTION</h5>
+                  <p>Find What You Need Now</p>
+                  <a href = "shop.html" class = "btn mt-3 text-uppercase"> shop now <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/carousel2.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-start text-dark">
+                    <h5>ELECTRONIC</h5>
+                    <p>Find What You Need Now</p>
+                    <a href = "shop.html" class = "btn mt-3 text-uppercase"> shop now <i class="fa fa-arrow-right"></i></a>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/carousel1.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-start text-dark">
+                    <h5>FURNITURE</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                    <a href = "shop.html" class = "btn mt-3 text-uppercase"> shop now <i class="fa fa-arrow-right"></i></a>
+                  </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- collection -->
+    <section id = "collection" class = "py-5">
+      <div class = "container">
+          <div class = "title text-center">
+              <h2 class = "position-relative d-inline-block">Our Products</h2>
+              <h1></h1>
+          </div>
+          
+          <div class = "row g-0">
+              <div class = "d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+                  <button class = "btn m-2 text-dark active-filter-btn" data-filter = "*">New Arrivals</button>
+                  <button class = "btn m-2 text-dark" data-filter = ".best">Best Sellers</button>
+                  <button class = "btn m-2 text-dark" data-filter = ".feat">Featured Product</button>
+              </div>
+
+              <div class = "collection-list mt-4 row gx-0 gy-3">
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                      <div class = "collection-img position-relative">
+                          <img src = "img/furni10.jpeg" class = "w-100">
+                          <span class = "position-absolute bg-success text-white d-flex align-items-center justify-content-center">sale</span>
+                      </div>
+                      <div class = "text-center">
+                          <p class = "text-capitalize my-1">Wood Club Chairs with Cushions</p>
+                          <span class = "fw-bold d-block">$ 45.50</span>
+                          <a href="product.html" class="btn btn-success my-1">BUY</a>
+                      </div>
+                  </div>
+
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                      <div class = "collection-img position-relative">
+                          <img src = "img/furni9.webp" class = "w-100">
+                          <span class = "position-absolute bg-success text-white d-flex align-items-center justify-content-center">sale</span>
+                      </div>
+                      <div class = "text-center">
+                        <p class = "text-capitalize my-1">Cabinet Cupboard</p>
+                          <span class = "fw-bold d-block">$ 45.50</span>
+                          <a href="product.html" class="btn btn-success my-1">BUY</a>
+                      </div>
+                  </div>
+
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+                      <div class = "collection-img position-relative">
+                          <img src = "img/furni8.webp" class = "w-100">
+                          <span class = "position-absolute bg-success text-white d-flex align-items-center justify-content-center">sale</span>
+                      </div>
+                      <div class = "text-center">
+                        <p class = "text-capitalize my-1">Dining Table</p>
+                          <span class = "fw-bold d-block">$ 45.50</span>
+                          <a href="product.html" class="btn btn-success my-1">BUY</a>
+                      </div>
+                  </div>
+
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                      <div class = "collection-img position-relative">
+                          <img src = "img/furni7.webp" class = "w-100">
+                          <span class = "position-absolute bg-success text-white d-flex align-items-center justify-content-center">sale</span>
+                      </div>
+                      <div class = "text-center">
+                          <p class = "text-capitalize my-1">Bed</p>
+                          <span class = "fw-bold d-block">$ 45.50</span>
+                          <a href="product.html" class="btn btn-success my-1">BUY</a>
+                      </div>
+                  </div>
+
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                      <div class = "collection-img position-relative">
+                          <img src = "img/furni11.webp" class = "w-100">
+                          <span class = "position-absolute bg-success text-white d-flex align-items-center justify-content-center">sale</span>
+                      </div>
+                      <div class = "text-center">
+                          <p class = "text-capitalize my-1">Home Office Chair</p>
+                          <span class = "fw-bold d-block">$ 45.50</span>
+                          <a href="product.html" class="btn btn-success my-1">BUY</a>
+                      </div>
+                  </div>
+
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+                      <div class = "collection-img position-relative">
+                          <img src = "img/furni12.webp" class = "w-100">
+                          <span class = "position-absolute bg-success text-white d-flex align-items-center justify-content-center">sale</span>
+                      </div>
+                      <div class = "text-center">
+                          <p class = "text-capitalize my-1">Mini Table</p>
+                          <span class = "fw-bold d-block">$ 8.67</span>
+                          <a href="product.html" class="btn btn-success my-1">BUY</a>
+                      </div>
+                  </div>
+
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                      <div class = "collection-img position-relative">
+                          <img src = "img/furni13.jpeg" class = "w-100">
+                          <span class = "position-absolute bg-success text-white d-flex align-items-center justify-content-center">sale</span>
+                      </div>
+                      <div class = "text-center">
+                          <p class = "text-capitalize my-1">Solid Plush Shag Area Rug</p>
+                          <span class = "fw-bold d-block">$ 80.00</span>
+                          <a href="product.html" class="btn btn-success my-1">BUY</a>
+                      </div>
+                  </div>
+
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                      <div class = "collection-img position-relative">
+                          <img src = "img/furni14.jpeg" class = "w-100">
+                          <span class = "position-absolute bg-success text-white d-flex align-items-center justify-content-center">sale</span>
+                      </div>
+                      <div class = "text-center">
+                          <p class = "text-capitalize my-1">Framed Wall Art Print Set</p>
+                          <span class = "fw-bold d-block">$ 109.99</span>
+                          <a href="product.html" class="btn btn-success my-1">BUY</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- end of collection -->
+
+  <!-- Newsletter -->
+  <section id = "newsletter" class = "py-5">
+    <div class = "container">
+        <div class = "d-flex flex-column align-items-center justify-content-center">
+            <div class = "title text-center pt-3 pb-5">
+                <h2 class = "position-relative d-inline-block ms-4">Newsletter Subscription</h2>
+            </div>
+
+            <p class = "text-center text-muted">Be the first to get update the latest news, special offers, new products and other promotion</p>
+            <div class = "input-group mb-3 mt-3">
+                <input type = "text" class = "form-control" placeholder="Enter Your Email ...">
+                <button class = "btn btn-primary" type = "submit">Subscribe</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- superiority -->
+  <div class="container">
+      <div class="row m-5">
+          <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+              <div class = "text-center">
+                  <i class="fas fa-shipping-fast fa-4x mb-3"></i>
+                  <span class = "fw-bold d-block">Free Shipping</span>
+                  <p class = "text-capitalize my-1">on all orders over $49.00</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                <div class = "text-center">
+                    <i class="fa-solid fa-hand-holding-dollar fa-4x mb-3"></i>
+                    <span class = "fw-bold d-block">15 days returns</span>
+                    <p class = "text-capitalize my-1">moneyback guarantee</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                <div class = "text-center">
+                    <i class="fa-regular fa-credit-card fa-4x mb-3"></i>
+                    <span class = "fw-bold d-block">Secure checkout</span>
+                    <p class = "text-capitalize my-1">100% protected by Paypal</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                <div class = "text-center">
+                    <i class="fas fa-light fa-money-check-dollar fa-4x mb-3"></i>
+                    <span class = "fw-bold d-block">100% free warranty</span>
+                    <p class = "text-capitalize my-1">100% protected by Paypal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end superiority -->
+    
+
+<footer class = "bg-dark py-5">
+    <div class = "container">
+        <div class = "row text-white g-4">
+            <div class = "col-md-6 col-lg-3">
+                <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">about</a>
+                <p class = "text-white text-muted mt-3">Find a variety of FURNIKS collections at special prices here. Create your dream gathering space that is comfortable and fun. FURNIKS Official Website.</p>
+            </div>
+            
+            <div class = "col-md-6 col-lg-3">
+                <h5 class = "fw-light">Links</h5>
+                <ul class = "list-unstyled">
+                    <li class = "my-3">
+                        <a href = "index.html" class = "text-white text-decoration-none text-muted">
+                            <i class = "fas fa-chevron-right me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class = "my-3">
+                        <a href = "shop.html" class = "text-white text-decoration-none text-muted">
+                            <i class = "fas fa-chevron-right me-1"></i> Shop
+                        </a>
+                    </li>
+                    <li class = "my-3">
+                        <a href = "about.html" class = "text-white text-decoration-none text-muted">
+                            <i class = "fas fa-chevron-right me-1"></i> About Us
+                        </a>
+                    </li>
+                    <li class = "my-3">
+                        <a href = "contact.html" class = "text-white text-decoration-none text-muted">
+                            <i class = "fas fa-chevron-right me-1"></i> Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class = "col-md-6 col-lg-3">
+                <h5 class = "fw-light mb-3">Contact Us</h5>
+                <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                    <span class = "me-3">
+                        <i class = "fas fa-map-marked-alt"></i>
+                    </span>
+                    <span class = "fw-light">
+                        Gondangdia, Menteng, Jakarta Pusat, Jakarta 10350
+                    </span>
+                </div>
+                <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                    <span class = "me-3">
+                        <i class = "fas fa-envelope"></i>
+                    </span>
+                    <span class = "fw-light">
+                        Furniks.support@gmail.com
+                    </span>
+                </div>
+                <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                    <span class = "me-3">
+                        <i class = "fas fa-phone-alt"></i>
+                    </span>
+                    <span class = "fw-light">
+                        +6282482390
+                    </span>
+                </div>
+            </div>
+            
+            <div class = "col-md-6 col-lg-3">
+                <h5 class = "fw-light mb-3">Follow Us</h5>
+                <div>
+                    <ul class = "list-unstyled d-flex">
+                        <li>
+                            <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                <i class = "fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                <i class = "fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                <i class = "fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                <i class = "fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-100 mt-5 border-top py-3">
+				<div class="container">
+					<div class="row">
+	          <div class="col-md-6 col-lg-8">
+	            <p class="copyright">Copyright &copy; 2022 All rights reserved | This website is made with <i class="fas fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Furniks Team</a></p>
+	          </div>
+	          <div class="col-md-6 col-lg-4 text-md-right">
+	          	<p class="mb-0 list-unstyled">
+	          		<a class="mr-md-3" href="#">Terms</a>
+	          		<a class="mr-md-3" href="#">Privacy</a>
+	          		<a class="mr-md-3" href="#">Compliances</a>
+	          	</p>
+	          </div>
+	        </div>
+				</div>
+			</div>
+        </div>
+    </div>
+</footer>
+
+<!-- jquery -->
+<script src="js/jquery-3.6.2.js"></script>
+<!-- isotope js -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<!-- Bootstrap js -->
+<script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+<!-- custom js -->
+<script src="js/script.js"></script>
+</body>
+</html>
